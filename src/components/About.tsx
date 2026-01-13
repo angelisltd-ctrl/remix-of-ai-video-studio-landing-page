@@ -10,7 +10,7 @@ export function About() {
   const processSteps = [
     {
       number: "01",
-      title: "Special Offers",
+      title: "Current Offers",
       description: "Browse and discover our Special Offers",
       icon: Search,
       color: "bg-blue-500",
