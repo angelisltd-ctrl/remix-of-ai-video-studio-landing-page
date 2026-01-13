@@ -10,10 +10,11 @@ export function About() {
   const processSteps = [
     {
       number: "01",
-      title: "Browse & Discover",
-      description: "Explore our curated selection of quality new vehicles online or in-person",
+      title: "Special Offers",
+      description: "Browse and discover our Special Offers",
       icon: Search,
-      color: "bg-blue-500"
+      color: "bg-blue-500",
+      link: "https://www.unicars.com/gr/offers-sales.php"
     },
     {
       number: "02", 
@@ -88,12 +89,16 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {processSteps.map((step, index) => {
               const Icon = step.icon
+              const CardWrapper = step.link ? 'a' : 'div'
+              const cardProps = step.link ? { href: step.link, target: "_blank", rel: "noopener noreferrer" } : {}
+              
               return (
-                <div
+                <CardWrapper
                   key={step.number}
+                  {...cardProps}
                   className={`relative bg-card clean-border rounded-2xl p-6 text-center transition-all duration-500 ${
                     activeStep >= index ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-4'
-                  }`}
+                  } ${step.link ? 'hover:scale-105 cursor-pointer' : ''}`}
                 >
                   {/* Step Number */}
                   <div className={`w-12 h-12 ${step.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -114,7 +119,7 @@ export function About() {
                   {index < processSteps.length - 1 && (
                     <div className="hidden md:block absolute top-10 -right-3 w-6 h-0.5 bg-border" />
                   )}
-                </div>
+                </CardWrapper>
               )
             })}
           </div>
