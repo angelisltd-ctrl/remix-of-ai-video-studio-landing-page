@@ -54,9 +54,9 @@ export function Contact() {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Address</h4>
                   <p className="text-muted-foreground">
-                    123 Motor Way<br />
-                    Birmingham, B1 2AB<br />
-                    United Kingdom
+                    144, Giannoiu Kranidioti<br />
+                    Latsia, 2235<br />
+                    Cyprus
                   </p>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export function Contact() {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Phone</h4>
                   <p className="text-muted-foreground">
-                    +44 (0) 121 123 4567
+                    +357 22204000
                   </p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export function Contact() {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Email</h4>
                   <p className="text-muted-foreground">
-                    info@unicars.co.uk
+                    info@unicars.com
                   </p>
                 </div>
               </div>
