@@ -120,28 +120,6 @@ export function About() {
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">500+</div>
-              <div className="text-muted-foreground font-medium">Cars Sold</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">15+</div>
-              <div className="text-muted-foreground font-medium">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">98%</div>
-              <div className="text-muted-foreground font-medium">Happy Customers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">24/7</div>
-              <div className="text-muted-foreground font-medium">Support</div>
-            </div>
-          </div>
-        </div>
-
         {/* About Text */}
         <div className="mt-20 max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-black mb-6 text-foreground">Why Choose Unicars?</h3>
