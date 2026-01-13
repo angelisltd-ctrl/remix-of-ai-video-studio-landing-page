@@ -35,7 +35,7 @@ export function About() {
     {
       number: "05",
       title: "Ongoing Support",
-      description: "Enjoy lifetime service support and maintenance packages",
+      description: "Contact us",
       icon: Heart,
       color: "bg-emerald-500",
       link: "https://www.unicars.com/gr/contactform.php"
