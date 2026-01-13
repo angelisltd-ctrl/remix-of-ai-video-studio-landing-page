@@ -1,5 +1,3 @@
-import { Hero } from './components/Hero'
-
 import { About } from './components/About'
 import { Services } from './components/Services'
 
@@ -10,9 +8,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground" style={{ overflow: 'visible' }}>
       <main className="relative" role="main" style={{ overflow: 'visible' }}>
-        <section id="hero" aria-label="Hero section">
-          <Hero />
-        </section>
         <section id="about" aria-label="About section">
           <About />
         </section>
