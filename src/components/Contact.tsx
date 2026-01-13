@@ -90,7 +90,21 @@ export function Contact() {
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">Opening Hours</h4>
+                  <h4 className="font-bold text-foreground mb-1">Service Hours</h4>
+                  <p className="text-muted-foreground">
+                    Mon - Fri: 7:30 AM - 6:00 PM<br />
+                    Saturday: 8:00 AM - 2:00 PM<br />
+                    Sunday: Closed
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-foreground mb-1">Showroom Hours</h4>
                   <p className="text-muted-foreground">
                     Mon - Fri: 9:00 AM - 7:00 PM<br />
                     Saturday: 9:00 AM - 5:00 PM<br />
