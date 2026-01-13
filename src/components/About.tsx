@@ -29,7 +29,8 @@ export function About() {
       title: "Test Drive",
       description: "Experience your chosen vehicle firsthand with no pressure",
       icon: Car,
-      color: "bg-purple-500"
+      color: "bg-purple-500",
+      link: "https://www.unicars.com/gr/testdrive.php"
     },
     {
       number: "04",
