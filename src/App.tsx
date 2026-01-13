@@ -1,5 +1,5 @@
 import { Hero } from './components/Hero'
-import { Portfolio } from './components/Portfolio'
+
 import { About } from './components/About'
 import { Services } from './components/Services'
 
@@ -12,9 +12,6 @@ export default function App() {
       <main className="relative" role="main" style={{ overflow: 'visible' }}>
         <section id="hero" aria-label="Hero section">
           <Hero />
-        </section>
-        <section id="inventory" aria-label="Inventory section">
-          <Portfolio />
         </section>
         <section id="about" aria-label="About section">
           <About />
