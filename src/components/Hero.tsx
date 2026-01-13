@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Menu, X, Car } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import unicarsLogo from '@/assets/unicars-logo.jpg'
 
 export function Hero() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -82,13 +83,17 @@ export function Hero() {
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center cursor-pointer gap-2"
+              className="flex items-center cursor-pointer"
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
-              <Car className="w-8 h-8 text-blue-500" />
-              <span className="font-bold text-white text-xl tracking-wide">UNICARS</span>
+              <img 
+                src={unicarsLogo} 
+                alt="Unicars - Driving your stories" 
+                className="h-10 w-auto invert brightness-0 invert"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </motion.div>
 
             {/* Navigation Menu */}
