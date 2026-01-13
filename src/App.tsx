@@ -1,6 +1,5 @@
 import { Hero } from './components/Hero'
 import { Portfolio } from './components/Portfolio'
-import { Awards } from './components/Awards'
 import { About } from './components/About'
 import { Services } from './components/Services'
 import { Team } from './components/Team'
@@ -14,11 +13,8 @@ export default function App() {
         <section id="hero" aria-label="Hero section">
           <Hero />
         </section>
-        <section id="portfolio" aria-label="Portfolio section">
+        <section id="inventory" aria-label="Inventory section">
           <Portfolio />
-        </section>
-        <section id="awards" aria-label="Awards section">
-          <Awards />
         </section>
         <section id="about" aria-label="About section">
           <About />

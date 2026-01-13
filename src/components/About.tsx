@@ -1,346 +1,161 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import storyboardImage from '@/assets/storyboard-image.avif'
+import { Search, FileCheck, Car, Key, Heart } from 'lucide-react'
 
 export function About() {
-  const [activeFrame, setActiveFrame] = useState(-1)
+  const [activeStep, setActiveStep] = useState(-1)
   const [animationStarted, setAnimationStarted] = useState(false)
 
   const processSteps = [
     {
       number: "01",
-      title: "Concept & Script",
-      description: "Scene‑by‑scene draft with dialogues and time‑codes",
-      color: "accent-blue"
+      title: "Browse & Discover",
+      description: "Explore our curated selection of quality new vehicles online or in-person",
+      icon: Search,
+      color: "bg-blue-500"
     },
     {
       number: "02", 
-      title: "Look & Storyboard",
-      description: "AI engine selection and visual testing",
-      color: "accent-emerald"
+      title: "Get Pre-Approved",
+      description: "Quick and easy financing options tailored to your budget",
+      icon: FileCheck,
+      color: "bg-emerald-500"
     },
     {
       number: "03",
-      title: "AI Production",
-      description: "Motion tests and multi-variant generation",
-      color: "accent-purple"
+      title: "Test Drive",
+      description: "Experience your chosen vehicle firsthand with no pressure",
+      icon: Car,
+      color: "bg-purple-500"
     },
     {
       number: "04",
-      title: "Post‑production",
-      description: "VFX, color grading, and audio mixing",
-      color: "accent-blue"
+      title: "Drive Home",
+      description: "Complete your purchase and drive away in your new car",
+      icon: Key,
+      color: "bg-blue-500"
     },
     {
       number: "05",
-      title: "Master Delivery",
-      description: "Multi-format export and secure transfer",
-      color: "accent-purple"
+      title: "Ongoing Support",
+      description: "Enjoy lifetime service support and maintenance packages",
+      icon: Heart,
+      color: "bg-emerald-500"
     }
   ]
 
   useEffect(() => {
-    // Start film animation after a 3 second pause
     setTimeout(() => {
       setAnimationStarted(true)
       processSteps.forEach((_, index) => {
         setTimeout(() => {
-          setActiveFrame(index)
-         
-        }, index * 2000 + 1000) // Ultra slow: Start after 24s, then every 72s
+          setActiveStep(index)
+        }, index * 800 + 500)
       })
-    }, 3000) // 3 second pause after section loads
+    }, 1000)
   }, [])
 
   return (
     <section id="about" className="relative py-20 bg-background overflow-hidden">
       
-      {/* Cinematic Background */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
-      
-      {/* Film Grain Effect */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-        <div className="w-full h-full" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.8) 1px, transparent 0)`,
-          backgroundSize: '3px 3px',
-          animation: 'filmGrain 8s infinite'
-        }} />
-      </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Behind the Scenes
+              Simple Process
             </span>
-            <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
-            How We Create Magic
+            Your Journey to a New Car
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Watch our process unfold frame by frame
+            We've streamlined the car buying experience to make it easy and enjoyable
           </p>
         </div>
 
-        {/* Film Strip Container */}
-        <div className="relative max-w-7xl mx-auto">
-          
-          {/* Film Strip Background */}
-          <div className="relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 rounded-xl overflow-hidden"
-               style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.05)' }}>
-            
-            {/* Film Perforations - Top - Now animated */}
-            <div className="absolute top-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
-              <div className={`flex items-center justify-between px-12 h-full ${
-                animationStarted ? 'perforations-scroll-animation' : ''
-              }`} style={{ width: '200%' }}>
-                {/* First set of perforations */}
-                {[...Array(20)].map((_, i) => (
-                  <div key={`top-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0" 
-                       style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
-                ))}
-                {/* Duplicate set for seamless loop */}
-                {[...Array(20)].map((_, i) => (
-                  <div key={`top-dup-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0" 
-                       style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
-                ))}
-              </div>
-            </div>
-            
-            {/* Film Perforations - Bottom - Now animated */}
-            <div className="absolute bottom-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
-              <div className={`flex items-center justify-between px-12 h-full ${
-                animationStarted ? 'perforations-scroll-animation' : ''
-              }`} style={{ width: '200%' }}>
-                {/* First set of perforations */}
-                {[...Array(20)].map((_, i) => (
-                  <div key={`bottom-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0"
-                       style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
-                ))}
-                {/* Duplicate set for seamless loop */}
-                {[...Array(20)].map((_, i) => (
-                  <div key={`bottom-dup-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0"
-                       style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
-                ))}
-              </div>
-            </div>
-
-            {/* Film Frames Container - Scrolling Animation */}
-            <div className="relative py-6 px-8 overflow-hidden h-64 max-w-full">
-              <div className={`flex transition-transform duration-1000 ease-in-out ${
-                animationStarted ? 'film-scroll-animation' : ''
-              }`} style={{ width: 'max-content', gap: '32px' }}>
-                
-                {/* Original sequence for seamless loop */}
-                {/* Start frame */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
-                     style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
-                  <div className="text-gray-400 font-mono tracking-wider">● START</div>
-                </div>
-                
-                {/* Process Step Frames */}
-                {processSteps.map((step, index) => (
-                  <div
-                    key={step.number}
-                    className={`flex-shrink-0 w-80 h-52 bg-background rounded-lg border-4 ${
-                      activeFrame >= index 
-                        ? `border-${step.color}` 
-                        : 'border-gray-600'
-                    }`}
-                    style={{
-                      boxShadow: '0 8px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
-                    }}
-                  >
-                    
-                    {/* Frame Content */}
-                    <div className="relative h-full p-6 flex flex-col justify-between">
-                      
-                      {/* Frame Number Badge */}
-                      <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center font-black z-10 border-3 border-white text-lg"
-                           style={{ boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }}>
-                        {step.number}
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="opacity-100">
-                        
-                        {/* Step Title */}
-                        <h3 className="font-black text-xl leading-tight mb-4 text-foreground">
-                          {step.title}
-                        </h3>
-                        
-                        {/* Step Description */}
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {step.description}
-                        </p>
-                      </div>
-                      
-                      {/* Film frame edge lines */}
-                      <div className="absolute left-1 top-1 bottom-1 w-px bg-gray-300/20" />
-                      <div className="absolute right-1 top-1 bottom-1 w-px bg-gray-300/20" />
-                      <div className="absolute top-1 left-1 right-1 h-px bg-gray-300/20" />
-                      <div className="absolute bottom-1 left-1 right-1 h-px bg-gray-300/20" />
-                    </div>
+        {/* Process Steps */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon
+              return (
+                <div
+                  key={step.number}
+                  className={`relative bg-card clean-border rounded-2xl p-6 text-center transition-all duration-500 ${
+                    activeStep >= index ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-4'
+                  }`}
+                >
+                  {/* Step Number */}
+                  <div className={`w-12 h-12 ${step.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
-                ))}
-                
-                {/* End frame */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center"
-                     style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
-                  <div className="text-gray-400 font-mono tracking-wider">● END</div>
-                </div>
-                
-                {/* Duplicate set for seamless loop */}
-                {/* Start frame duplicate */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
-                     style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
-                  <div className="text-gray-400 font-mono tracking-wider">● START</div>
-                </div>
-                
-                {/* Process Step Frames duplicate */}
-                {processSteps.map((step, index) => (
-                  <div
-                    key={`duplicate-${step.number}`}
-                    className={`flex-shrink-0 w-80 h-52 bg-background rounded-lg border-4 ${
-                      activeFrame >= index 
-                        ? `border-${step.color}` 
-                        : 'border-gray-600'
-                    }`}
-                    style={{
-                      boxShadow: '0 8px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
-                    }}
-                  >
-                    
-                    {/* Frame Content */}
-                    <div className="relative h-full p-6 flex flex-col justify-between">
-                      
-                      {/* Frame Number Badge */}
-                      <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center font-black z-10 border-3 border-white text-lg"
-                           style={{ boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }}>
-                        {step.number}
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="opacity-100">
-                        
-                        {/* Step Title */}
-                        <h3 className="font-black text-xl leading-tight mb-4 text-foreground">
-                          {step.title}
-                        </h3>
-                        
-                        {/* Step Description */}
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {step.description}
-                        </p>
-                      </div>
-                      
-                      {/* Film frame edge lines */}
-                      <div className="absolute left-1 top-1 bottom-1 w-px bg-gray-300/20" />
-                      <div className="absolute right-1 top-1 bottom-1 w-px bg-gray-300/20" />
-                      <div className="absolute top-1 left-1 right-1 h-px bg-gray-300/20" />
-                      <div className="absolute bottom-1 left-1 right-1 h-px bg-gray-300/20" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          {/* Enhanced Projector Light Effect */}
-          {activeFrame >= 0 && (
-            <div className="absolute inset-0 pointer-events-none">
-              <div 
-                className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-10"
-                style={{
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,0,0.2) 40%, transparent 60%)',
-                  animation: 'projectorLight 12s ease-in-out infinite'
-                }}
-              />
-            </div>
-          )}
-        </div>
+                  
+                  {/* Step Title */}
+                  <h3 className="font-black text-lg mb-2 text-foreground">
+                    {step.title}
+                  </h3>
+                  
+                  {/* Step Description */}
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
 
-        {/* Film Controls */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-6 bg-card/80 backdrop-blur-sm clean-border rounded-2xl px-8 py-4 subtle-shadow">
-            
-            {/* Film Speed Indicator */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-foreground">24 FPS</span>
-            </div>
-            
-            <div className="w-px h-6 bg-border" />
-            
-            {/* Duration */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-accent-blue rounded-full animate-pulse" style={{animationDelay: '0.5s'}} />
-              <span className="text-sm font-semibold text-foreground">5-7 Days</span>
-            </div>
-            
-            <div className="w-px h-6 bg-border" />
-            
-            {/* Quality */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse" style={{animationDelay: '1s'}} />
-              <span className="text-sm font-semibold text-foreground">Cinema Quality</span>
-            </div>
+                  {/* Connector Line (hidden on mobile and last item) */}
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden md:block absolute top-10 -right-3 w-6 h-0.5 bg-border" />
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
 
-        {/* AI Generated Content Gallery */}
+        {/* Stats Section */}
         <div className="mt-20">
-          <div className="text-center mb-8">
-            <p className="text-muted-foreground">
-              A glimpse into our storyboard development process
-            </p>
-          </div>
-          
-          {/* Gallery Image */}
-          <div className="relative max-w-6xl mx-auto">
-            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-4 overflow-hidden">
-              
-              {/* Film grain overlay for authenticity */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                   style={{
-                     backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.8) 1px, transparent 0)`,
-                     backgroundSize: '4px 4px'
-                   }} />
-              
-              {/* Main gallery image */}
-              <img 
-                src={storyboardImage}
-                alt="Collection of AI-generated video content thumbnails showcasing MOJJU's diverse output"
-                className="w-full h-auto rounded-xl"
-                style={{
-                  filter: 'contrast(1.05) saturate(1.1) brightness(0.95)'
-                }}
-              />
-              
-              {/* Subtle overlay gradient for depth */}
-              <div className="absolute inset-4 rounded-xl pointer-events-none"
-                   style={{
-                     background: 'linear-gradient(135deg, rgba(37,99,235,0.03) 0%, transparent 20%, transparent 80%, rgba(124,58,237,0.03) 100%)'
-                   }} />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">500+</div>
+              <div className="text-muted-foreground font-medium">Cars Sold</div>
             </div>
-            
-            {/* Caption */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-muted-foreground italic">
-                "Diverse scenarios, characters, and styles — all generated through our AI pipeline"
-              </p>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">15+</div>
+              <div className="text-muted-foreground font-medium">Years Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">98%</div>
+              <div className="text-muted-foreground font-medium">Happy Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">24/7</div>
+              <div className="text-muted-foreground font-medium">Support</div>
             </div>
           </div>
+        </div>
+
+        {/* About Text */}
+        <div className="mt-20 max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-black mb-6 text-foreground">Why Choose Unicars?</h3>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            At Unicars Ltd, we believe buying a car should be an exciting experience, not a stressful one. 
+            Our team of dedicated professionals is committed to helping you find the perfect vehicle 
+            that fits your lifestyle and budget.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            With our transparent pricing, no-pressure sales approach, and comprehensive after-sales support, 
+            we're not just selling cars – we're building relationships that last a lifetime.
+          </p>
         </div>
       </div>
-      
     </section>
   )
 }
