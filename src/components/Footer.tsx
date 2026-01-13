@@ -1,6 +1,6 @@
 'use client'
 
-import { Car, Facebook, Instagram, Twitter } from 'lucide-react'
+import { Car, Facebook, Instagram } from 'lucide-react'
 
 export function Footer() {
   const carBrands = [
@@ -35,22 +35,20 @@ export function Footer() {
               {/* Social Media Icons */}
               <div className="flex items-center space-x-4">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/unicarscyprus/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/unicarscy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
