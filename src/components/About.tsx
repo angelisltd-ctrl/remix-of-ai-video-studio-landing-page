@@ -18,10 +18,11 @@ export function About() {
     },
     {
       number: "02", 
-      title: "Get Pre-Approved",
-      description: "Quick and easy financing options tailored to your budget",
+      title: "Special Offers",
+      description: "Check our Special Offers on eHub",
       icon: FileCheck,
-      color: "bg-emerald-500"
+      color: "bg-emerald-500",
+      link: "https://www.ehub.unicars.com.cy/"
     },
     {
       number: "03",
