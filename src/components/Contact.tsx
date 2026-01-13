@@ -90,7 +90,7 @@ export function Contact() {
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">Service Hours</h4>
+                  <h4 className="font-bold text-foreground mb-1">Workshop Hours</h4>
                   <p className="text-muted-foreground">
                     Mon - Fri: 7:30 AM - 6:00 PM<br />
                     Saturday: 8:00 AM - 2:00 PM<br />
