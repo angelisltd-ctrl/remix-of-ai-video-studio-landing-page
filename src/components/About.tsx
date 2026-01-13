@@ -33,13 +33,6 @@ export function About() {
       link: "https://www.unicars.com/gr/testdrive.php"
     },
     {
-      number: "04",
-      title: "Drive Home",
-      description: "Complete your purchase and drive away in your new car",
-      icon: Key,
-      color: "bg-blue-500"
-    },
-    {
       number: "05",
       title: "Ongoing Support",
       description: "Enjoy lifetime service support and maintenance packages",
