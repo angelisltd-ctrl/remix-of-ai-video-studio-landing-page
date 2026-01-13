@@ -3,17 +3,6 @@
 import { Car, Facebook, Instagram } from 'lucide-react'
 
 export function Footer() {
-  const carBrands = [
-    'BMW',
-    'Mercedes-Benz', 
-    'Audi',
-    'Volkswagen',
-    'Toyota',
-    'Honda',
-    'Ford',
-    'Hyundai'
-  ]
-
   return (
     <footer className="relative py-20 bg-foreground text-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -67,7 +56,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div className="col-span-6 md:col-span-2">
+          <div className="col-span-6 md:col-span-4">
             <h4 className="font-bold text-lg text-background mb-4">Services</h4>
             <ul className="space-y-3">
               <li><a href="#services" className="text-background/70 hover:text-background transition-colors">New Cars</a></li>
@@ -76,21 +65,6 @@ export function Footer() {
               <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Service Centre</a></li>
               <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Warranty</a></li>
             </ul>
-          </div>
-
-          {/* Brands We Carry */}
-          <div className="col-span-12 md:col-span-4">
-            <h4 className="font-bold text-lg text-background mb-4">Brands We Carry</h4>
-            <div className="grid grid-cols-2 gap-3">
-              {carBrands.map((brand) => (
-                <div
-                  key={brand}
-                  className="text-background/70 hover:text-background transition-colors text-sm"
-                >
-                  {brand}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
