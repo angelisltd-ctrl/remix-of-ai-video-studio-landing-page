@@ -92,9 +92,8 @@ export function Contact() {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Workshop Hours</h4>
                   <p className="text-muted-foreground">
-                    Mon - Fri: 7:30 AM - 6:00 PM<br />
-                    Saturday: 8:00 AM - 2:00 PM<br />
-                    Sunday: Closed
+                    Mon - Thu: 07:30 - 13:00 & 13:30 - 16:45<br />
+                    Fri: 07:30 - 13:45
                   </p>
                 </div>
               </div>
