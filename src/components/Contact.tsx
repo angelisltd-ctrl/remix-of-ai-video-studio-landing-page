@@ -54,7 +54,7 @@ export function Contact() {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Address</h4>
                   <p className="text-muted-foreground">
-                    144, Giannoiu Kranidioti<br />
+                    144, Giannou Kranidioti<br />
                     Latsia, 2235<br />
                     Cyprus
                   </p>
