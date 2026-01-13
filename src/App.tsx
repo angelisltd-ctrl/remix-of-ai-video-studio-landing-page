@@ -1,3 +1,4 @@
+import { Header } from './components/Header'
 import { About } from './components/About'
 import { Services } from './components/Services'
 
@@ -7,6 +8,7 @@ import { Footer } from './components/Footer'
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground" style={{ overflow: 'visible' }}>
+      <Header />
       <main className="relative" role="main" style={{ overflow: 'visible' }}>
         <section id="about" aria-label="About section">
           <About />
