@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Car, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import unicarsLogo from '@/assets/unicars-logo.png';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
@@ -19,9 +20,8 @@ export function Header() {
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 bg-black text-white">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <Car className="w-8 h-8 text-primary" />
-            <span className="font-bold text-xl">UNICARS</span>
+          <a href="#" className="flex items-center">
+            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
