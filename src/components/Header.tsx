@@ -21,7 +21,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 bg-black text-white">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-8 w-auto" />
+            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
