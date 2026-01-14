@@ -1,6 +1,7 @@
 'use client'
 
-import { Car, Facebook, Instagram } from 'lucide-react'
+import { Facebook, Instagram } from 'lucide-react'
+import unicarsLogo from '@/assets/unicars-logo.png'
 
 export function Footer() {
   return (
@@ -10,9 +11,8 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="col-span-12 md:col-span-4">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Car className="w-8 h-8 text-blue-400" />
-                <span className="font-bold text-background text-2xl">UNICARS</span>
+              <div className="mb-4">
+                <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-12 w-auto" />
               </div>
               <p className="text-background/70 leading-relaxed mb-2">
                 <strong>Driving Your Stories</strong>
