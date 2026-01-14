@@ -16,12 +16,12 @@ export function Header() {
     href: '#contact',
     label: 'Contact'
   }];
-  return <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-16 bg-black text-white">
+  return <header className="sticky top-0 z-50 bg-black text-white">
+      <div className="w-full px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-14 w-auto transition-transform duration-300 hover:scale-105" />
+            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-16 w-auto transition-transform duration-300 hover:scale-105" />
           </a>
 
           {/* Desktop Navigation */}
