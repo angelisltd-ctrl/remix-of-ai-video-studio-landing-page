@@ -1,9 +1,27 @@
 'use client'
 
-import { Facebook, Instagram } from 'lucide-react'
+import { useState } from 'react'
+import { Facebook, Instagram, Send } from 'lucide-react'
 import unicarsLogo from '@/assets/unicars-logo.png'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { useToast } from '@/hooks/use-toast'
 
 export function Footer() {
+  const [email, setEmail] = useState('')
+  const { toast } = useToast()
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      toast({
+        title: "Successfully subscribed!",
+        description: "Thank you for subscribing to our newsletter.",
+      })
+      setEmail('')
+    }
+  }
+
   return (
     <footer className="relative py-20 bg-foreground text-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -44,15 +62,38 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-span-6 md:col-span-4">
+          <div className="col-span-6 md:col-span-2">
             <h4 className="font-bold text-lg text-background mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              
               <li><a href="#about" className="text-background/70 hover:text-background transition-colors">About Us</a></li>
               <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Services</a></li>
-              
               <li><a href="#contact" className="text-background/70 hover:text-background transition-colors">Contact</a></li>
             </ul>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="col-span-12 md:col-span-6">
+            <h4 className="font-bold text-lg text-background mb-4">Stay Updated</h4>
+            <p className="text-background/70 leading-relaxed mb-4">
+              Subscribe to our newsletter for the latest deals, new arrivals, and exclusive offers.
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-3">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 bg-background/10 border-background/20 text-background placeholder:text-background/50 focus:border-background/40"
+              />
+              <Button 
+                type="submit" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6"
+              >
+                <Send className="w-4 h-4 mr-2" />
+                Subscribe
+              </Button>
+            </form>
           </div>
         </div>
 
