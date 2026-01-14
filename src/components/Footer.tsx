@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-span-6 md:col-span-2">
+          <div className="col-span-6 md:col-span-4">
             <h4 className="font-bold text-lg text-background mb-4">Quick Links</h4>
             <ul className="space-y-3">
               
@@ -52,18 +52,6 @@ export function Footer() {
               <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Services</a></li>
               
               <li><a href="#contact" className="text-background/70 hover:text-background transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="col-span-6 md:col-span-4">
-            <h4 className="font-bold text-lg text-background mb-4">Services</h4>
-            <ul className="space-y-3">
-              <li><a href="#services" className="text-background/70 hover:text-background transition-colors">New Cars</a></li>
-              <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Financing</a></li>
-              <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Trade-In</a></li>
-              <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Service Centre</a></li>
-              <li><a href="#services" className="text-background/70 hover:text-background transition-colors">Warranty</a></li>
             </ul>
           </div>
         </div>
