@@ -54,7 +54,8 @@ export function Contact() {
       addresses: [
         { name: "Nicosia After Sales Hub", address: "144 Giannou Kranidiotis Ave.", city: "2235 Latsia", tel: "+357 22204222" },
         { name: "Limassol Workshop and Spare Parts", address: "204 Franklin Roosevelt Ave.", city: "3045 Zakaki", tel: "+357 25827300" },
-        { name: "Larnaca Workshop and Spare Parts", address: "4 Pireos", city: "7101 Aradippou", tel: "+357 24533777" }
+        { name: "Larnaca Workshop and Spare Parts", address: "4 Pireos", city: "7101 Aradippou", tel: "+357 24533777" },
+        { name: "Paphos Workshop and Spare Parts", address: "13 Charalampou Pettemeridis", city: "Industrial Area Geroskipou, 8028", tel: "+357 26967444" }
       ]
     }
   ]
