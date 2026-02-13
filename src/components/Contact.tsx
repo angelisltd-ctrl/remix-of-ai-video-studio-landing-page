@@ -27,11 +27,11 @@ export function Contact() {
       ]
     },
     {
-      title: "Workshops",
-      icon: Wrench,
-      color: "bg-emerald-600",
+      title: "Body and Paint",
+      icon: Paintbrush,
+      color: "bg-orange-600",
       addresses: [
-        { name: "Main Workshop", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+        { name: "Main Facility", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
       ]
     },
     {
@@ -48,11 +48,11 @@ export function Contact() {
       ]
     },
     {
-      title: "Body and Paint",
-      icon: Paintbrush,
-      color: "bg-orange-600",
+      title: "Workshops",
+      icon: Wrench,
+      color: "bg-emerald-600",
       addresses: [
-        { name: "Main Facility", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+        { name: "Main Workshop", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
       ]
     }
   ]
