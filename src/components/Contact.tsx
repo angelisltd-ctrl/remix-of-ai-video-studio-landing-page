@@ -23,7 +23,7 @@ export function Contact() {
       icon: Building2,
       color: "bg-blue-600",
       addresses: [
-        { name: "Main Office", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+        { name: "Main Office", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "+357 22204000" }
       ]
     },
     {
