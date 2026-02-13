@@ -41,6 +41,7 @@ export function Contact() {
       addresses: [
         { name: "Nicosia – Sales Hub", address: "9 Megaron Street", city: "2032 Strovolos", tel: "+357 22366366" },
         { name: "Limassol VW", address: "122 Franklin Roosevelt Avenue", city: "3011 Zakaki", tel: "+357 25819799" },
+        { name: "Limassol", address: "37 Omonia Ave.", city: "3052", tel: "+357 25567577" },
         { name: "Larnaka", address: "2 Eleftherias Avenue", city: "7101 Aradippou", tel: "+357 24811033" },
         { name: "Paphos Offices", address: "90 Mesogis Avenue", city: "8280", tel: "+357 26954626" },
         { name: "Famagusta Offices", address: "71 Sotiros Avenue", city: "5286 Paralimni", tel: "+357 23743888" }
