@@ -31,7 +31,7 @@ export function Contact() {
       icon: Paintbrush,
       color: "bg-orange-600",
       addresses: [
-        { name: "Main Facility", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+        { name: "Nicosia Paint Shop and Body Shop", address: "45A Tripolis Street", city: "2235 Latsia", tel: "+357 22204192" }
       ]
     },
     {
