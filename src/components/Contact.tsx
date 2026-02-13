@@ -1,40 +1,58 @@
 'use client'
 
-import { MapPin, Building2, Wrench, Car, Paintbrush } from 'lucide-react'
+import { MapPin, Building2, Wrench, Car, Paintbrush, Phone } from 'lucide-react'
+
+interface LocationAddress {
+  name: string
+  address: string
+  city: string
+  tel: string
+}
+
+interface LocationGroup {
+  title: string
+  icon: typeof Building2
+  color: string
+  addresses: LocationAddress[]
+}
 
 export function Contact() {
-  const locations = [
+  const locations: LocationGroup[] = [
     {
       title: "Headquarters",
       icon: Building2,
-      address: "144, Giannou Kranidioti",
-      city: "Latsia, 2235",
-      country: "Cyprus",
-      color: "bg-blue-600"
+      color: "bg-blue-600",
+      addresses: [
+        { name: "Main Office", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+      ]
     },
     {
       title: "Workshops",
       icon: Wrench,
-      address: "144, Giannou Kranidioti",
-      city: "Latsia, 2235",
-      country: "Cyprus",
-      color: "bg-emerald-600"
+      color: "bg-emerald-600",
+      addresses: [
+        { name: "Main Workshop", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+      ]
     },
     {
       title: "Showrooms",
       icon: Car,
-      address: "144, Giannou Kranidioti",
-      city: "Latsia, 2235",
-      country: "Cyprus",
-      color: "bg-purple-600"
+      color: "bg-purple-600",
+      addresses: [
+        { name: "Nicosia – Sales Hub", address: "9 Megaron Street", city: "2032 Strovolos", tel: "+357 22366366" },
+        { name: "Limassol VW", address: "122 Franklin Roosevelt Avenue", city: "3011 Zakaki", tel: "+357 25819799" },
+        { name: "Larnaka", address: "2 Eleftherias Avenue", city: "7101 Aradippou", tel: "+357 24811033" },
+        { name: "Paphos Offices", address: "90 Mesogis Avenue", city: "8280", tel: "+357 26954626" },
+        { name: "Famagusta Offices", address: "71 Sotiros Avenue", city: "5286 Paralimni", tel: "+357 23743888" }
+      ]
     },
     {
       title: "Body and Paint",
       icon: Paintbrush,
-      address: "144, Giannou Kranidioti",
-      city: "Latsia, 2235",
-      country: "Cyprus",
-      color: "bg-orange-600"
+      color: "bg-orange-600",
+      addresses: [
+        { name: "Main Facility", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "" }
+      ]
     }
   ]
 
@@ -73,17 +91,30 @@ export function Contact() {
                   <Icon className="w-7 h-7 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-black mb-3 text-foreground">
+                <h3 className="text-xl font-black mb-4 text-foreground">
                   {location.title}
                 </h3>
                 
-                <div className="flex items-start justify-center gap-2 text-muted-foreground">
-                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <p className="text-sm leading-relaxed">
-                    {location.address}<br />
-                    {location.city}<br />
-                    {location.country}
-                  </p>
+                <div className="space-y-4">
+                  {location.addresses.map((addr) => (
+                    <div key={addr.name} className="text-left border-l-2 border-muted pl-3">
+                      <p className="text-sm font-semibold text-foreground mb-1">{addr.name}</p>
+                      <div className="flex items-start gap-1.5 text-muted-foreground mb-1">
+                        <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                        <p className="text-xs leading-relaxed">
+                          {addr.address}<br />{addr.city}
+                        </p>
+                      </div>
+                      {addr.tel && (
+                        <div className="flex items-center gap-1.5 text-muted-foreground">
+                          <Phone className="w-3.5 h-3.5 flex-shrink-0" />
+                          <a href={`tel:${addr.tel.replace(/\s/g, '')}`} className="text-xs hover:text-foreground transition-colors">
+                            {addr.tel}
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             )
