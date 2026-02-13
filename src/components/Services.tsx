@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Car, CreditCard, Wrench, Shield, RefreshCw, Truck } from 'lucide-react'
+import { Car, CreditCard, Wrench, Shield, RefreshCw, ListOrdered } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function Services() {
@@ -44,11 +44,12 @@ export function Services() {
       color: 'bg-emerald-500'
     },
     {
-      id: 'delivery',
-      title: "Home Delivery",
-      description: "Can't come to us? We'll bring your new car directly to your doorstep at no extra cost.",
-      icon: Truck,
-      color: 'bg-purple-500'
+      id: 'pricelist',
+      title: "Pricelist",
+      description: "View our complete and up-to-date pricelists for all available models and configurations.",
+      icon: ListOrdered,
+      color: 'bg-purple-500',
+      link: 'https://www.unicars.com/gr/pricelists.php'
     }
   ]
 
@@ -98,13 +99,16 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = service.icon
             return (
-              <motion.div
+              <motion.a
                 key={service.id}
+                href={service.link || undefined}
+                target={service.link ? "_blank" : undefined}
+                rel={service.link ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+                className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${service.link ? 'cursor-pointer' : ''}`}
               >
                 {/* Icon */}
                 <div className={`w-14 h-14 ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -120,7 +124,7 @@ export function Services() {
                 <p className="text-blue-100/70 leading-relaxed">
                   {service.description}
                 </p>
-              </motion.div>
+              </motion.a>
             )
           })}
         </div>
