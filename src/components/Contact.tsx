@@ -103,12 +103,17 @@ export function Contact() {
                   {location.addresses.map((addr) => (
                     <div key={addr.name} className="text-left border-l-2 border-muted pl-3">
                       <p className="text-sm font-semibold text-foreground mb-1">{addr.name}</p>
-                      <div className="flex items-start gap-1.5 text-muted-foreground mb-1">
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${addr.address}, ${addr.city}, Cyprus`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-1.5 text-muted-foreground mb-1 hover:text-foreground transition-colors"
+                      >
                         <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                        <p className="text-xs leading-relaxed">
+                        <p className="text-xs leading-relaxed underline-offset-2 hover:underline">
                           {addr.address}<br />{addr.city}
                         </p>
-                      </div>
+                      </a>
                       {addr.tel && (
                         <div className="flex items-center gap-1.5 text-muted-foreground">
                           <Phone className="w-3.5 h-3.5 flex-shrink-0" />
