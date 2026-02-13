@@ -74,7 +74,7 @@ export function About() {
 
         {/* Process Steps */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {processSteps.map((step, index) => {
               const Icon = step.icon
               const CardWrapper = step.link ? 'a' : 'div'
