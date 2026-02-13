@@ -1,6 +1,6 @@
 'use client'
 
-import { MapPin, Building2, Wrench, Car, Paintbrush, Phone } from 'lucide-react'
+import { MapPin, Building2, Wrench, Car, Paintbrush, Phone, Clock, Shield } from 'lucide-react'
 
 interface LocationAddress {
   name: string
@@ -128,6 +128,100 @@ export function Contact() {
               </div>
             )
           })}
+        </div>
+
+        {/* Working Hours */}
+        <div className="mt-16 max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-3 mb-4">
+              <Clock className="w-5 h-5 text-muted-foreground" />
+              <h3 className="text-3xl sm:text-4xl font-black text-foreground">Winter Hours</h3>
+              <Clock className="w-5 h-5 text-muted-foreground" />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Showrooms */}
+            <div className="bg-background clean-border rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <Car className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-black text-foreground">Showrooms</h4>
+              </div>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><span className="font-semibold text-foreground">Monday - Friday:</span><br />08:30-13:00, 15:00 – 18:00</p>
+                <p><span className="font-semibold text-foreground">Wednesday:</span> 08:30-13:00</p>
+                <p><span className="font-semibold text-foreground">Saturday:</span> 09:00-13:00</p>
+              </div>
+            </div>
+
+            {/* Workshops */}
+            <div className="bg-background clean-border rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
+                  <Wrench className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-black text-foreground">Workshops</h4>
+              </div>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><span className="font-semibold text-foreground">Monday-Thursday:</span><br />07:30 – 13:00 / 13:30 - 16:15</p>
+                <p><span className="font-semibold text-foreground">Friday:</span> 07:30 – 13:45</p>
+              </div>
+            </div>
+
+            {/* Body & Paint */}
+            <div className="bg-background clean-border rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
+                  <Paintbrush className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-black text-foreground">Body & Paint</h4>
+              </div>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><span className="font-semibold text-foreground">Monday-Thursday:</span><br />07:30 – 13:00 / 13:30 - 16:15</p>
+                <p><span className="font-semibold text-foreground">Friday:</span> 07:30 – 13:45</p>
+              </div>
+            </div>
+
+            {/* Guard Hours */}
+            <div className="bg-background clean-border rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-black text-foreground">Guard Hours</h4>
+              </div>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Nicosia:</p>
+                  <p>Monday-Thursday: 06:00 – 09:00 / 16:00 – 22:00</p>
+                  <p>Friday: 06:00 – 09:00 / 13:00 – 22:00</p>
+                  <p>Sunday: 16:00 – 20:00</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Limassol:</p>
+                  <p>Monday-Thursday: 16:00 – 20:00</p>
+                  <p>Friday: 13:00 – 20:00</p>
+                  <p>Sunday: 16:00 – 20:00</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Head Offices */}
+            <div className="bg-background clean-border rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-black text-foreground">Head Offices</h4>
+              </div>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><span className="font-semibold text-foreground">Monday-Thursday:</span><br />08:30 – 13:30 / 14:00 – 17:15</p>
+                <p><span className="font-semibold text-foreground">Friday:</span> 08:30 – 13:30</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
