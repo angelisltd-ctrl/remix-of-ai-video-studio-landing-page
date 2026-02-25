@@ -38,7 +38,7 @@ export function About() {
       description: "Contact us",
       icon: Heart,
       color: "bg-emerald-500",
-      link: "https://www.unicars.com/gr/contactform.php"
+      link: "https://www.unicars.com/en/contactform.php"
     }
   ]
 
