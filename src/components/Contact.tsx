@@ -7,6 +7,7 @@ interface LocationAddress {
   address: string
   city: string
   tel: string
+  mapUrl: string
 }
 
 interface LocationGroup {
@@ -23,7 +24,7 @@ export function Contact() {
       icon: Building2,
       color: "bg-blue-600",
       addresses: [
-        { name: "Main Office", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "+357 22204000" }
+        { name: "Main Office", address: "144, Giannou Kranidioti", city: "Latsia, 2235", tel: "+357 22204000", mapUrl: "https://maps.app.goo.gl/J3JqgxHHpMkTUrWy8" }
       ]
     },
     {
@@ -31,7 +32,7 @@ export function Contact() {
       icon: Paintbrush,
       color: "bg-orange-600",
       addresses: [
-        { name: "Nicosia Paint Shop and Body Shop", address: "45A Tripolis Street", city: "2235 Latsia", tel: "+357 22204192" }
+        { name: "Nicosia Paint Shop and Body Shop", address: "45A Tripolis Street", city: "2235 Latsia", tel: "+357 22204192", mapUrl: "https://maps.app.goo.gl/5oP9dHspzGJUktHy7" }
       ]
     },
     {
@@ -39,12 +40,12 @@ export function Contact() {
       icon: Car,
       color: "bg-purple-600",
       addresses: [
-        { name: "Nicosia – Sales Hub", address: "9 Megaron Street", city: "2032 Strovolos", tel: "+357 22366366" },
-        { name: "Limassol VW", address: "122 Franklin Roosevelt Avenue", city: "3011 Zakaki", tel: "+357 25819799" },
-        { name: "Limassol Audi", address: "37 Omonia Ave.", city: "3052", tel: "+357 25567577" },
-        { name: "Larnaka", address: "2 Eleftherias Avenue", city: "7101 Aradippou", tel: "+357 24811033" },
-        { name: "Paphos Offices", address: "90 Mesogis Avenue", city: "8280", tel: "+357 26954626" },
-        { name: "Famagusta Offices", address: "71 Sotiros Avenue", city: "5286 Paralimni", tel: "+357 23743888" }
+        { name: "Nicosia – Sales Hub", address: "9 Megaron Street", city: "2032 Strovolos", tel: "+357 22366366", mapUrl: "https://maps.app.goo.gl/WreJYc1XXiAhLau19" },
+        { name: "Limassol VW", address: "122 Franklin Roosevelt Avenue", city: "3011 Zakaki", tel: "+357 25819799", mapUrl: "https://maps.app.goo.gl/MrpXK6sw2AfMfmfW9" },
+        { name: "Limassol Audi", address: "37 Omonia Ave.", city: "3052", tel: "+357 25567577", mapUrl: "https://maps.app.goo.gl/538ra7VKDDVqUyxK7" },
+        { name: "Larnaka", address: "2 Eleftherias Avenue", city: "7101 Aradippou", tel: "+357 24811033", mapUrl: "https://maps.app.goo.gl/whDhiBvqVGSNy8929" },
+        { name: "Paphos Offices", address: "90 Mesogis Avenue", city: "8280", tel: "+357 26954626", mapUrl: "https://maps.app.goo.gl/QSCDMic6Y6ZWap6m8" },
+        { name: "Famagusta Offices", address: "71 Sotiros Avenue", city: "5286 Paralimni", tel: "+357 23743888", mapUrl: "https://maps.app.goo.gl/C6LEqTwCttocFmfP7" }
       ]
     },
     {
@@ -52,10 +53,10 @@ export function Contact() {
       icon: Wrench,
       color: "bg-emerald-600",
       addresses: [
-        { name: "Nicosia After Sales Hub", address: "144 Giannou Kranidiotis Ave.", city: "2235 Latsia", tel: "+357 22204222" },
-        { name: "Limassol Workshop and Spare Parts", address: "204 Franklin Roosevelt Ave.", city: "3045 Zakaki", tel: "+357 25827300" },
-        { name: "Larnaca Workshop and Spare Parts", address: "4 Pireos", city: "7101 Aradippou", tel: "+357 24533777" },
-        { name: "Paphos Workshop and Spare Parts", address: "13 Charalampou Pettemeridis", city: "Industrial Area Geroskipou, 8028", tel: "+357 26967444" }
+        { name: "Nicosia After Sales Hub", address: "144 Giannou Kranidiotis Ave.", city: "2235 Latsia", tel: "+357 22204222", mapUrl: "https://maps.app.goo.gl/oYxqScJgy7UgQ1VH7" },
+        { name: "Limassol Workshop and Spare Parts", address: "204 Franklin Roosevelt Ave.", city: "3045 Zakaki", tel: "+357 25827300", mapUrl: "https://maps.app.goo.gl/rsCTfcHnudwCuzVU8" },
+        { name: "Larnaca Workshop and Spare Parts", address: "4 Pireos", city: "7101 Aradippou", tel: "+357 24533777", mapUrl: "https://maps.app.goo.gl/vGrBfyE9YTowU6Ri8" },
+        { name: "Paphos Workshop and Spare Parts", address: "13 Charalampou Pettemeridis", city: "Industrial Area Geroskipou, 8028", tel: "+357 26967444", mapUrl: "https://maps.app.goo.gl/J3HYmHdd12BE2mMo7" }
       ]
     }
   ]
@@ -104,7 +105,7 @@ export function Contact() {
                     <div key={addr.name} className="text-left border-l-2 border-muted pl-3">
                       <p className="text-sm font-semibold text-foreground mb-1">{addr.name}</p>
                       <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${addr.address}, ${addr.city}, Cyprus`)}`}
+                        href={addr.mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-start gap-1.5 text-muted-foreground mb-1 hover:text-foreground transition-colors"
