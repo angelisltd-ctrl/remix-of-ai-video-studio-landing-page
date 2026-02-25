@@ -14,7 +14,7 @@ export function About() {
       description: "Browse and discover our Special Offers",
       icon: Search,
       color: "bg-blue-500",
-      link: "https://www.unicars.com/gr/offers-sales.php"
+      link: "https://www.unicars.com/en/offers-sales.php"
     },
     {
       number: "02", 
