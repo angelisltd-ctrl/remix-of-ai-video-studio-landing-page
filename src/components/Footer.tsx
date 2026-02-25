@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col items-center text-center">
           {/* Logo and Description */}
           <div className="mb-4">
-            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-12 w-auto" />
+            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-60 w-auto" />
           </div>
           <p className="text-background/70 leading-relaxed mb-2">
             <strong>Driving Your Stories</strong>
