@@ -6,8 +6,8 @@ export function Header() {
       <div className="w-full px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-center h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-16 w-auto transition-transform duration-300 hover:scale-105" />
+          <a href="https://www.unicars.com/en/index.php" target="_blank" rel="noopener noreferrer" className="flex items-center">
+            <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-24 w-auto transition-transform duration-300 hover:scale-105" />
           </a>
         </div>
       </div>
