@@ -142,9 +142,9 @@ export function Services() {
               <button className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 Schedule a Visit
               </button>
-              <button className="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">
+              <a href="tel:+35722880044" className="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors inline-block">
                 Call Us Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
