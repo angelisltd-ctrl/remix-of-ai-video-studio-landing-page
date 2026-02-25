@@ -30,7 +30,7 @@ export function About() {
       description: "Experience your chosen vehicle firsthand with no pressure",
       icon: Car,
       color: "bg-purple-500",
-      link: "https://www.unicars.com/gr/testdrive.php"
+      link: "https://www.unicars.com/en/testdrive.php"
     },
     {
       number: "05",
