@@ -139,9 +139,6 @@ export function Services() {
               Our team is here to help you every step of the way. Schedule a visit or give us a call today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                Schedule a Visit
-              </button>
               <a href="tel:+35722880044" className="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors inline-block">
                 Call Us Now
               </a>
