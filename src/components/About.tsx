@@ -121,10 +121,18 @@ export function About() {
             Our team of dedicated professionals is committed to helping you find the perfect vehicle 
             that fits your lifestyle and budget.
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             With our transparent pricing, no-pressure sales approach, and comprehensive after-sales support, 
             we're not just selling cars – we're building relationships that last a lifetime.
           </p>
+          <a
+            href="https://www.unicars.com/gr/history.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-bold rounded-xl hover:opacity-90 transition-opacity"
+          >
+            Learn More About Us
+          </a>
         </div>
       </div>
     </section>
