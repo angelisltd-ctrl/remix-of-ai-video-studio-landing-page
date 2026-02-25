@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="relative py-20 bg-foreground text-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        <div>
+        <div className="flex flex-col items-center text-center">
           {/* Logo and Description */}
           <div className="mb-4">
             <img src={unicarsLogo} alt="Unicars - Driving Your Stories" className="h-12 w-auto" />
