@@ -49,7 +49,7 @@ export function Services() {
       description: "View our complete and up-to-date pricelists for all available models and configurations.",
       icon: ListOrdered,
       color: 'bg-purple-500',
-      link: 'https://www.unicars.com/gr/pricelists.php'
+      link: 'https://www.unicars.com/en/pricelists.php'
     }
   ]
 
