@@ -45,7 +45,7 @@ export function Footer() {
               © 2025 Unicars Ltd. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm text-background/70">
-              <a href="#" className="hover:text-background transition-colors">Privacy Policy</a>
+              <a href="https://www.unicars.com/gr/privacy.php" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-background transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-background transition-colors">Cookie Policy</a>
             </div>
