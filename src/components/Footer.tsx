@@ -47,7 +47,7 @@ export function Footer() {
             <div className="flex gap-6 text-sm text-background/70">
               <a href="https://www.unicars.com/gr/privacy.php" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Privacy Policy</a>
               <a href="https://www.unicars.com/gr/terms.php" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-background transition-colors">Cookie Policy</a>
+              
             </div>
           </div>
         </div>
